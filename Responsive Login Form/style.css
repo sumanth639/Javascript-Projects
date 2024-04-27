@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  max-width: 1200px;
+  margin: auto;
+  gap: 60px;
+}
+.left {
+  width: 50%;
+}
+.right {
+  width: 50%;
+}
+.title {
+  margin-bottom: 40px;
+}
+.input-group {
+  margin-top: 20px;
+  position: relative;
+}
+.input-group input {
+  padding: 10px;
+  outline: none;
+  border-radius: 12px;
+  border: #e2e8f0 2px solid;
+  width: 100%;
+  transition: all 0.3s;
+  padding-left: 40px;
+}
+.input-group i {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.3s;
+}
+.input-group label {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 10px;
+  transition: all 0.3s;
+}
+
+.input-group input:focus,
+.input-group input:valid {
+  border: 2px solid #0ea5e9;
+}
+.input-group input:focus ~ i,
+.input-group input:valid ~ i {
+  color: #0ea5e9;
+}
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+  color: #0ea5e9;
+  top: 0;
+  padding: 0px 10px;
+  background: white;
+}
+
+.remember-forgot {
+  color: #1e293b;
+
+  padding-top: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+.remember-forgot label {
+  display: flex;
+  gap: 5px;
+  font-size: 14px;
+}
+.remember-forgot a {
+  color: #1e293b;
+  text-decoration: none;
+  font-size: 14px;
+}
+.login-btn {
+  width: 100%;
+  color: white;
+  background-color: #0ea5e9;
+  padding: 6px 0px;
+  font-size: 22px;
+  border-radius: 12px;
+  border: 2px solid #0ea5e9;
+  font-weight: 600;
+  margin-top: 25px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  color: #0ea5e9;
+  background-color: white;
+}
+.continue {
+  border-top: 2px solid #ddd;
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.continue-txt {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  top: -12px;
+  background: white;
+  padding: 0 8px;
+  color: #1e293b !important;
+}
+.login-with {
+  display: flex;
+  justify-content: space-between;
+}
+.login-with a {
+  border: 2px solid #e2e8f0;
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+.login-with a:hover {
+  background-color: #e2e8f0;
+}
+.login-with a img {
+  width: 30px;
+}
+.register {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+.register span {
+  color: #1e293b;
+}
+.register a {
+  text-decoration: none !important;
+  color: #0ea5e9;
+  font-weight: 500;
+}
+.right .image {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent),
+    url(image.jpg);
+  background-size: cover;
+  height: 80vh;
+  background-position: center;
+  max-height: 1000px;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  border-radius: 20px;
+  overflow: hidden;
+}
+/* Media quries */
+@media (max-width: 775px) {
+  main {
+    flex-direction: column-reverse;
+    padding: 0;
+    height: fit-content;
+    gap: 0;
+  }
+  .right {
+    width: 100%;
+  }
+  .right .image {
+    border-radius: 0;
+    height: fit-content;
+    padding: 40px;
+  }
+  .left {
+    width: 100%;
+    padding: 40px;
+    position: relative;
+    top: -10px;
+    border-radius: 12px 12px 0 0 !important;
+    box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+@media (max-width: 401px) {
+  .continue-txt {
+    font-size: small;
+  }
+}
